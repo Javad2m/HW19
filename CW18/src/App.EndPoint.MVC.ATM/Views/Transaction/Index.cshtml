@@ -1,0 +1,44 @@
+﻿@using App.Domain.Core.hw15.Transaction.Dtos
+@model List<GetTransactionsDto>
+
+
+
+
+<h1>مدیریت تراکنش ها</h1>
+
+<table class="table table-bordered table-responsive table-primary table-hover">
+	@if (ViewBag.ErrorMessage != null)
+	{
+		<div class="alert" role="alert">
+			@ViewBag.ErrorMessage
+		</div>
+	}
+	<thead>
+		<tr>
+			<th>کارت مبدا</th>
+			<th>کارت مقصد</th>
+			<th>مبلغ</th>
+			<th>زمان تراکنش</th>
+
+
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+
+			<tr>
+				<td>@item.SourceCardNumber</td>
+				<td>@item.DestinationsCardNumber</td>
+				<td>@item.Amount</td>
+				<td>@item.ActionAt</td>
+
+
+			</tr>
+		}
+	</tbody>
+
+</table>
+<a asp-controller="Transaction" asp-action="CardToCard" class="btn btn-primary" type="button">کارت به کارت</a>
+<a asp-controller="Card" asp-action="ChangPassword" class="btn btn-primary" type="button">تغییر رمز کارت</a>

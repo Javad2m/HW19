@@ -1,0 +1,36 @@
+﻿@using App.Domain.Core.hw15.Card.Entity
+
+@model Card
+
+
+<div class="container px-5 my-5">
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+
+    <form method="post" asp-action="LoginCard">
+        <div class="form-floating mb-3">
+            <input class="form-control" name="CardNumber" type="text" placeholder="CardNumber" required />
+            <label for="name">CardNumber</label>
+
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" name="Password" type="text" placeholder="Password" required />
+            <label for="name">Password</label>
+
+        </div>
+
+
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Login</button>
+        </div>
+    </form>
+</div>
+<div class="text-danger">
+    @Html.ValidationSummary(false)
+</div>

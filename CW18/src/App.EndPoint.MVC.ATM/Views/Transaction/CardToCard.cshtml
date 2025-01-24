@@ -1,0 +1,30 @@
+﻿@using App.Domain.Core.hw15.Card.Entity
+
+@model Card
+
+
+<div class="container px-5 my-5">
+    <div class="mb-4 p-3 border rounded bg-light">
+        <h5>موجودی کارت: <span class="fw-bold">@Model.Balance تومان</span></h5>
+    </div>
+
+<div class="container px-5 my-5">
+    <form method="post" asp-action="CardAction">
+        <div class="form-floating mb-3">
+                <input class="form-control" name="SourceCard" type="text" placeholder="SourceCard" data-sb-validations="required" value="@Model.CardNumber" readonly />
+            <label for="SourceCard">کارت مبدا</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" name="DestinationCard" type="text" placeholder="DestinationCard" data-sb-validations="required" />
+            <label for="DestinationCard">کارت مقصد</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" name="Amount" type="text" placeholder="Amount" data-sb-validations="required" />
+            <label for="Amount">مبلغ</label>
+        </div>
+       
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
