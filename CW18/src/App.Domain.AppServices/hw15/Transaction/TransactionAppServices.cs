@@ -19,10 +19,10 @@ public class TransactionAppServices : ITransactionAppServices
 {
     private readonly ITransactionServices _transactionServices;
     private readonly ICardServices _cardServices;
-    public TransactionAppServices()
+    public TransactionAppServices(ITransactionServices transactionServices, ICardServices cardServices)
     {
-        _cardServices = new CardServices(); 
-        _transactionServices = new TransactionServices();
+        _cardServices = cardServices;
+        _transactionServices = transactionServices;
     }
 
     public List<GetTransactionsDto> GetListOfTransactions(string cardNumber)

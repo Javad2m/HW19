@@ -1,5 +1,6 @@
 ﻿using App.Domain.Core.hw15.Result;
 using App.Domain.Core.hw15.Transaction.Data.Repositories;
+using App.Domain.Core.hw15.User.Data.Repository;
 using App.Domain.Core.hw15.User.Services;
 using App.Infra.Data.Repos.Ef.hw15.Transaction;
 using System;
@@ -13,10 +14,10 @@ namespace App.Domain.Services.hw15.User
     public class UserServices : IUserServices
     {
 
-        private readonly IUserServices userServices;
-        public UserServices()
+        private readonly IUserRepository userServices;
+        public UserServices(IUserRepository userServicess)
         {
-            userServices = new UserServices();
+            userServices = userServicess;
         }
         public void GenerateAndSaveVerificationCode(int userId, string fullName, int verificationCode, DateTime expirationTime)
         {

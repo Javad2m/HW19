@@ -9,7 +9,12 @@ namespace App.EndPoint.MVC.ATM.Controllers;
 
 public class CardController : Controller
 {
-    ICardAppServices cardAppServices = new CardAppServices();
+    private readonly ICardAppServices cardAppServices;
+
+    public CardController(ICardAppServices cardAppServicess)
+    {
+        cardAppServices = cardAppServicess;
+    }
     [HttpGet]
     public IActionResult Login()
     {

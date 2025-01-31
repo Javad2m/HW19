@@ -12,9 +12,9 @@ namespace App.Domain.Services.hw15.Card;
 public class CardServices : ICardServices
 {
     private readonly ICardRepositories cardRepositories;
-    public CardServices()
+    public CardServices(ICardRepositories ccardRepositories)
     {
-        cardRepositories = new CardRepository();
+        cardRepositories = ccardRepositories;
     }
     public bool CardIsActive(string cardNumber)
     {

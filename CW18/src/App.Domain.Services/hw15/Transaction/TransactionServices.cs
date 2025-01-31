@@ -13,9 +13,9 @@ namespace App.Domain.Services.hw15.Transaction
     public class TransactionServices : ITransactionServices
     {
         private readonly ITransactionRepositories transactionRepositories;
-        public TransactionServices()
+        public TransactionServices(ITransactionRepositories ttransactionRepositories)
         {
-            transactionRepositories = new TransactionRepository();
+            transactionRepositories = ttransactionRepositories;
         }
 
         public void Add(Core.hw15.Transaction.Entity.Transaction transaction)

@@ -13,9 +13,9 @@ public class TransactionRepository : ITransactionRepositories
 {
     private readonly AppDbContext _appDbContext;
 
-    public TransactionRepository()
+    public TransactionRepository(AppDbContext db)
     {
-        _appDbContext = new AppDbContext();
+        _appDbContext = db;
     }
     public void Add(Domain.Core.hw15.Transaction.Entity.Transaction transaction)
     {

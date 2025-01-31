@@ -17,3 +17,4 @@ C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.Domain.Services\bin\Debug\net9.0\
 C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.Domain.Services\bin\Debug\net9.0\App.Infra.Data.Repos.Ef.dll
 C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.Domain.Services\bin\Debug\net9.0\App.Infra.Data.Db.SqlServer.Ef.pdb
 C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.Domain.Services\bin\Debug\net9.0\App.Infra.Data.Repos.Ef.pdb
+C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.Domain.Services\obj\Debug\net9.0\App.Domain.Services.sourcelink.json

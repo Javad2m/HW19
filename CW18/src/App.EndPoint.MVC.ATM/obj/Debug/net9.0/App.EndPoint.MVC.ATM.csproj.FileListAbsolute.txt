@@ -241,3 +241,4 @@ C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.EndPoint.MVC.ATM\bin\Debug\net9.0
 C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.EndPoint.MVC.ATM\bin\Debug\net9.0\App.Domain.AppServices.pdb
 C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.EndPoint.MVC.ATM\bin\Debug\net9.0\App.Domain.Services.pdb
 C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.EndPoint.MVC.ATM\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\Notebook\Desktop\CW - 18\CW18\src\App.EndPoint.MVC.ATM\obj\Debug\net9.0\App.EndPoint.MVC.ATM.sourcelink.json

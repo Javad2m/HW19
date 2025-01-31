@@ -13,9 +13,9 @@ namespace App.Infra.Data.Repos.Ef.hw15.Card
     {
 
         private readonly AppDbContext _appContext;
-        public CardRepository()
+        public CardRepository(AppDbContext db)
         {
-            _appContext = new AppDbContext();
+            _appContext = db;
         }
         public bool CardIsActive(string cardNumber)
         {

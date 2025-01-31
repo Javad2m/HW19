@@ -7,7 +7,12 @@ namespace App.EndPoint.MVC.ATM.Controllers
 {
     public class TransactionController : Controller
     {
-        ITransactionAppServices transactionAppServices = new TransactionAppServices();
+        private readonly ITransactionAppServices transactionAppServices;
+
+        public TransactionController(ITransactionAppServices transactionAppServicess)
+        {
+            transactionAppServices = transactionAppServicess;
+        }
         public IActionResult Index()
         {
             var tr = transactionAppServices.GetListOfTransactions(Cur.CurUser.CardNumber);

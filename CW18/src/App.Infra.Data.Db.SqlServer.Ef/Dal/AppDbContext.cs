@@ -13,13 +13,12 @@ namespace App.Infra.Data.Db.SqlServer.Ef.Dal;
 
 public class AppDbContext : DbContext
 {
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+    public AppDbContext(DbContextOptions options) : base(options)
     {
-        optionsBuilder
-            .UseSqlServer(
-                "Data Source=WKK13\\SQLEXPRESS;Initial Catalog=hw18;User ID=sa;Password=111222333aA;TrustServerCertificate=True;Encrypt=True");
-        base.OnConfiguring(optionsBuilder);
+        
     }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new UserConfiguration());

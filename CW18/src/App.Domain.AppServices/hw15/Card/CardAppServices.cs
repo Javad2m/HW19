@@ -16,9 +16,9 @@ using App.Infra.Data.Db.SqlServer.Ef.Cur;
 public class CardAppServices : ICardAppServices
 {
     private readonly ICardServices _cardServices;
-    public CardAppServices()
+    public CardAppServices(ICardServices cardServices)
     {
-        _cardServices = new CardServices();
+        _cardServices = cardServices;
     }
 
 

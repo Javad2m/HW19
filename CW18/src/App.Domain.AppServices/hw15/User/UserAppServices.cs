@@ -19,10 +19,10 @@ public class UserAppServices : IUserAppServices
     private readonly IUserServices _userRepository;
     private readonly ICardServices _cardRepository;
 
-    public UserAppServices()
+    public UserAppServices(IUserServices userServices,ICardServices cardServices)
     {
-        _userRepository = new UserServices();
-        _cardRepository = new CardServices();
+        _userRepository = userServices;
+        _cardRepository = cardServices;
     }
 
 

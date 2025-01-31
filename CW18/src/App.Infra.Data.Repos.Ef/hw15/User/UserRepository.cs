@@ -19,9 +19,9 @@ public class UserRepository : IUserRepository
 
 
 
-    public UserRepository()
+    public UserRepository(AppDbContext db)
     {
-        _appDbContext = new AppDbContext();
+        _appDbContext = db;
 
         var directory = Path.GetDirectoryName(_path);
         if (Directory.Exists(directory))
